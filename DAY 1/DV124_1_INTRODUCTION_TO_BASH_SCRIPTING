@@ -1,0 +1,58 @@
+
+
+
+
+
+
+echo $SHELL
+
+sh (bourne shell)
+
+
+csh
+
+
+
+ksh
+
+
+bash
+
+
+
+tcsh
+
+
+zsh
+
+
+
+
+
+echo “hello world”
+
+vi hello_world.sh
+i
+
+#!/bin/bash		       (shebang)
+# My first Bash script         (comment)
+echo “hello world”
+echo $SHELL
+echo `date`
+
+(esc)
+:wq
+
+chmod +x hello_world.sh			(make file executable)
+
+
+
+
+
+
+
+
+
+
+
+
