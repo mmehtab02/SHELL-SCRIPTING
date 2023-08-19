@@ -1,0 +1,102 @@
+
+
+
+Check system variables :
+
+set
+env / printenv
+
+
+echo $HOSTNAME
+echo $HOME
+echo HOME (not sysvar)
+
+
+user defined vars:
+
+username=taha
+echo $username
+
+unset username
+
+
+
+
+
+
+
+
+
+global variables :
+
+vi g_variable.sh
+
+#!/bin/bash
+username=taha
+echo “outside function: $username”
+func()
+{
+echo “inside function: $username”
+}
+func
+
+chmod +x g_variable.sh
+
+
+
+
+local vars:
+
+vi l_variable.sh
+
+#!/bin/bash
+username=taha
+echo “Outside function: $username”
+func()
+{
+local username=jack
+echo “Inside function: $username”
+}
+func
+
+chmod +x l_variable.sh
+
+
+read command:
+
+
+vi read.sh
+‘
+
+
+#!/bin/bash
+read -p "Enter username: " u
+echo "Hello $u"
+
+chmod +x read.sh
+
+./read.sh
+
+
+
+
+
+
+
+
+
+
+practice:
+
+#!/bin/bash
+echo "PWD is : $PWD"
+echo "LOGNAME is : $LOGNAME"
+
+
+practice 2:
+
+#!/bin/bash
+read -t 10 -p "Enter username: " u
+echo "Hello $u"
+
+
