@@ -1,0 +1,63 @@
+
+
+
+chmod, ./arg.sh
+
+
+
+
+
+
+
+#!/bin/bash
+echo "zeroth arg: $0"
+echo "first arg: $1"
+echo "second arg: $2"
+echo "third arg: $3"
+
+echo "twelfth arg ${12}"
+
+echo "total args: $#"
+
+echo "all args: $*"
+
+for arg in "$*"
+do
+echo "$arg"
+done
+
+echo "all args on seperate lines: $@"
+
+for arg in "$@"
+do
+echo "$arg"
+done
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+double quote :
+echo “Username is $USER”
+
+
+single quote:
+echo ‘Username is \$USER’
+
+
+
+backslash:
+
+
+
+
+echo “Username is \$USER”
