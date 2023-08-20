@@ -1,0 +1,42 @@
+globbing :
+
+
+
+
+
+
+
+ls *.sh = all sh files
+ls s*.sh = all sh files starting with s
+ls [a-c]*.sh = all sh files starting with a, b, c (lowercase)
+ls [^a-c]*.sh = omit all files starting with a, b, c (lowercase)
+ls [Aa]*.sh = all upper and lower case sh files with Aa
+ls [a-c]*.sh [A-C]*.sh = all upper and lower case
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export command:
+
+
+
+
+myvar=lion
+echo $myvar
+/bin/bash (new shell)
+echo $myvar (empty line) (not transferred) (local to previous shell)
+export myvar=lion (global now)
+
+
+
