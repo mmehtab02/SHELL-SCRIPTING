@@ -1,0 +1,52 @@
+extract:
+
+
+
+#!/bin/bash
+declare -a array=('one' 'two' 'three' 'four' 'fifth' 'sixth' 'seventh')
+echo -e "Original elements: ${array[@]} \n"
+echo -e "The two elements starting from index one(two): ${array[@]:1:2} \n"
+
+
+
+
+
+
+replace:
+
+
+
+
+
+add element:
+
+
+#!/bin/bash
+declare -a array=('one' 'two' 'three' 'four' 'fifth' 'sixth' 'seventh')
+echo -e "Original elements: ${array[@]} \n"
+echo -e "Extract two elements starting from index one(two): ${array[@]:1:2} \n"
+array[2]='new word'
+echo -e "Elements after replacing: ${array[@]} \n"
+echo -e "The two elements starting from index one(two) after replacing: ${array[@]:1:2} \n
+array=("${array[@]}" "eight" "ninth")
+echo -e "Elements after appending: ${array[@]} \n"
+
+
+
+remove element:
+
+
+unset array[8]
+
+
+
+practice:
+
+
+declare -a array=('first' 'second' 'third' 'fourth' 'fifth' 'sixth' 'seventh')
+echo -e "Extract 3 elements starting from index 2(third): ${array[@]:2:3} \n"
+array[2]='Debian'
+echo -e "Elements after replacing: ${array[@]} \n"
+array=("${array[@]}" "new append")
+echo -e "Elements after appending: ${array[@]} \n"
+
