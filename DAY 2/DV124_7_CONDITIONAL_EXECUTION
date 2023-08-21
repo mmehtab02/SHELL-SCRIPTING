@@ -1,0 +1,90 @@
+
+
+
+
+
+ubuntu $ test 4 -eq 4; echo $?
+0
+ubuntu $ [ 4 -eq 4 ]; echo $?
+0
+ubuntu $ [4 -eq 4]; echo $?
+[4: command not found
+127
+ubuntu $ test 4 -eq 5; echo $?
+1
+ubuntu $ [ 4 -eq 5 ]; echo $?
+1
+ubuntu $
+
+
+man test
+
+
+
+
+
+if statement:
+
+
+
+
+
+
+#!/bin/bash
+
+count=100
+
+if [ $count -eq 100 ]; then
+echo "Count is 100"
+fi
+
+
+
+if else statement:
+
+
+#!/bin/bash
+
+PASS="abc123"
+read -s -p "Enter password: " mypassword
+if [ "$mypassword" == "$PASS" ];
+then
+echo -e "\nPassword accepted"
+else
+echo -e "\nAccess denied"
+fi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+practice:
+
+
+
+
+
+
+
+read -s -p "Enter username: " user
+if [ "$user" == "$USER" ];
+then
+echo -e "\nHello"
+else
+echo -e "\nTry again"
+fi
+
+
