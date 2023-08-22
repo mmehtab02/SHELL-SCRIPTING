@@ -1,0 +1,82 @@
+
+objectives :
+
+
+
+
+nested if else :
+
+
+
+
+#!/bin/bash
+
+NAME="taha"
+PASSWORD="abc123"
+
+read -p "Enter name: " myname
+if [ "$myname" == "$NAME" ]; then
+  read -s -p "Enter password: " mypassword
+  if [ "$mypassword" == "$PASSWORD" ]; then
+    echo -e "\nWelcome"
+  else
+    echo -e "\nWrong password"
+  fi
+else
+  echo Wrong name
+fi
+
+
+
+
+multilevel if-else :
+
+
+#!/bin/bash
+
+read -p "Enter a word : " mystring
+
+if [ -z "$mystring" ]; then
+
+  echo "Nothing was entered "
+
+elif [[ $mystring == *raj* ]]; then
+
+  echo "\"$mystring\" contains word 'raj'"
+
+elif [[ $mystring = *"jit"* ]]; then
+
+  echo "\"$mystring\" contains word 'jit'"
+
+else
+
+  echo "Sorry! Input does not contain either 'raj' or 'jit'"
+
+fi
+
+
+
+
+
+practice :
+
+
+
+#!/bin/bash
+
+read -p "Enter a number: " num
+
+if [ -z "$num" ]; then
+echo "User input is empty"
+elif [[ "$num" -eq 3 ]]; then
+echo "Number is 3"
+elif [[ "$num" -lt "3" ]]; then
+echo "Number is lesser than 3"
+elif [[ "$num" -gt "3" ]]; then
+echo "Number is greater than 3"
+fi
+
+
+
+
+
