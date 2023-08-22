@@ -1,0 +1,78 @@
+
+objectives :
+
+
+
+
+
+Logical operator :
+
+
+
+
+
+and / or :
+
+#!/bin/bash
+
+read -p "Enter a word: " string
+if [ -z $string ]; then
+echo "Nothing was entered"
+
+elif [[ $string == *"raj"* ]] && [[ $string == *"jit"* ]]; then
+echo "$string contains both the words 'raj' and 'jit'"
+
+elif [[ "$string" == *raj* ]] || [[ $string = *jit* ]]; then
+echo "$string contains the word 'raj' or 'jit'"
+
+else
+echo "Sorry! The entered word '$string' does not contain either 'raj' or 'jit'"
+fi
+
+
+
+logical not :
+
+
+
+
+
+not:
+
+#!/bin/bash
+
+if [ ! -f $1 ]; then
+  echo "File $1 does not exist"
+else
+  echo "File $1 exists"
+fi
+
+
+
+
+either - bash logicalnot.sh test.txt, ./logicalnot.sh test.txt
+
+
+
+
+
+practice :
+
+
+
+
+#!/bin/bash
+
+if [ ! -f $1 ]; then
+  echo "File doesn't exist"
+elif [[ ! -x $1 ]] && [[ -f $1 ]]; then
+  echo "File exists but is not executable"
+elif [[ -x $1 ]]; then
+  echo "Executable file exists"
+fi
+
+
+
+
+
+
