@@ -1,0 +1,96 @@
+
+objectives :
+
+
+
+#!/bin/bash
+
+echo "Enter filename: "
+
+read y
+
+x=`cat $y | wc -w`
+
+if [ $x -eq 0 ]; then
+  echo "$y has zero words"
+fi
+
+if [ $x -ne 0 ]; then
+  echo "$y has $x words"
+fi
+
+
+
+
+
+
+
+
+
+
+
+
+#!/bin/bash
+
+echo "Enter the filename: "
+read y
+x=`cat $y | wc -c`
+
+if [ $x -lt 1 ]; then
+echo "No characters present in $y"
+fi
+
+if [ $x -gt 1 ]; then
+echo "$y has more than one characters"
+
+  if [ $x -ge 1 ] && [ $x -le 100 ]; then
+    echo "Number of characters in $y ranges between 1 and 100"
+  fi
+
+  if [ $x -gt 100 ]; then
+    echo "Number of characters in $y is above 100"
+  fi
+fi
+
+
+
+
+
+
+
+practice :
+
+
+
+
+
+
+#!/bin/bash
+
+echo "Enter the filename: "
+read y
+x=`cat $y | wc -w`
+
+if [ $x -ne 5 ]; then
+echo "Words in $y are not equal to 5"
+fi
+
+if [ $x -lt 5 ]; then
+echo "Words in $y are less than 5"
+fi
+
+if [ $x -gt 5 ]; then
+echo "Words in $y are greater than 5"
+fi
+
+if [ $x -eq 5 ]; then
+echo "Words in $y are equal than 5"
+fi
+
+
+
+
+
+
+
+
